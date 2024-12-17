@@ -157,6 +157,12 @@ if user:
             color=performance_df['Color'],
         )
 
+        legend_handles = [
+            plt.Line2D([0], [0], color='green', lw=4, label='Good'),
+            plt.Line2D([0], [0], color='red', lw=4, label='Bad')
+        ]
+        ax.legend(handles=legend_handles, title="Performance")
+
         # Add labels and rotate for better readability
         plt.xticks(rotation=90)
         plt.title('Student Performance Summary')
